@@ -1,0 +1,91 @@
+/* ============= APP FRAME STYLES ============= */
+
+.header-fcdrive {
+    background-color: #D27A31
+}
+
+.fcdrive-img {
+    width: 80px;
+    align-content: center
+}
+
+.actions {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-self: stretch;
+}
+
+.option {
+    font-size: 1.5rem;
+    padding: 0px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ============= INDEX PAGE STYLES ============= */
+
+.welcome {
+    margin: 50px 0;
+}
+
+.fcdrive-input {
+    border-radius: 25px;
+    height: 56px;
+    margin: 10px 0;
+}
+
+.btn-fcamara-login {
+    background-color: #D27A31;
+    color: white;
+    border-radius: 25px !important;
+    width: 142px;
+}
+
+/* ============= SETTINGS PAGE STYLES ============= */
+
+.content {
+    margin-top: -23px;
+    height: auto;
+}
+
+.box-1 {
+    width: 100%;
+}
+
+button:disabled {
+    color: rgb(250, 170, 104) !important;
+}
+
+.box-1 > button {
+    color: #D27A31;
+    font-size: 90px;
+    background-color: transparent;
+    outline: none;
+}
+
+.box-2 {
+    width: 100%;
+}
+
+.box-2 > button {
+    color: #D27A31;
+    font-size: 90px;
+    background-color: transparent;
+    outline: none;
+}
+
+.box-2 > span {
+    clear: both;
+}
+
+.icon-change {
+    border: solid #D27A31 5px;
+    padding: 40px 37px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.extra-padding {
+    padding: 40px 51px;
+}

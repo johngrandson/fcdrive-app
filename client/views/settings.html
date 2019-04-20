@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FC Drive - FCamara</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://codeseven.github.io/toastr/build/toastr.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar header-fcdrive d-flex p-2">
+        <div class="navbar-brand" href="#">
+            <img src="../assets/images/logotipo_branco.png" class="d-inline-block align-top fcdrive-img" alt="">
+        </div>
+        <div class="actions">
+            <div class="option" id="close"><strong>x</strong></div>
+            <div class="option" id="minimize"><strong>–</strong></div>
+        </div>
+    </nav>
+    <br>
+    <p id="watcherMessage"></p>
+    <span id="messageLogger"></span>
+    <div class="content">
+        <div class="col-sm-12">
+            <div class="box-1 d-flex justify-content-center">
+                <button type="button" id="sync" onclick="sync()" class="fas fa-sync-alt icon-change" disabled></button>
+                <button type="button" id="stop" style="display:none"
+                    class="fas fa-times extra-padding icon-change"></button>
+            </div>
+            <div class="box-1 d-flex justify-content-center text-icon">
+                <span><strong>Sync</strong></span>
+            </div>
+        </div>
+        <hr>
+        <div class="col-sm-12">
+            <div class="box-1 d-flex justify-content-center">
+                <button type="button" id="start" class="far fa-folder-open icon-change"></button>
+            </div>
+            <div class="box-1 d-flex justify-content-center text-icon">
+                <span><strong>Escolher Pasta</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/watchFolder.js"></script>
+    <script src="../assets/scripts/electronWindow.js"></script>
+
+</body>
+
+</html>

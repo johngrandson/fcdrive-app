@@ -1,0 +1,54 @@
+{
+  "name": "fcdrive-express",
+  "version": "1.0.0",
+  "description": "FCDrive project with Node Express Backend",
+  "author": {
+    "name": "João Netto",
+    "twitter": "@johngrandson",
+    "url": "https://johngrandson.github.io"
+  },
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon index.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"wait-on http://localhost:5000 && electron main\"",
+    "dev:server": "cd client && yarn build && cd .. && yarn start",
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^10.3.0",
+    "azure-storage": "^2.10.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "chokidar": "^2.1.4",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "hidefile": "^2.0.0",
+    "install": "^0.12.2",
+    "jsonwebtoken": "^8.5.1",
+    "klaw-sync": "^6.0.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.20",
+    "npm": "^6.9.0",
+    "request": "^2.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "express",
+    "create-react-app",
+    "electron"
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0",
+    "wait-on": "^3.2.0"
+  }
+}
