@@ -5,28 +5,21 @@ const app = electron.app;  // Module to control application life.
 const BrowserWindow = electron.BrowserWindow;  // Module to create native browser window.
 const path = require('path');
 const pm2 = require('pm2');
+const { exec } = require('child_process');
 
 let mainWindow = null;
 
 const IMG_DIR = '/images/'
 
-pm2.connect(function(err) {
-  if (err) {
-    console.error('pm2 error: ', err);
-    process.exit(2);
-  }
-  
-  console.log('Connected to pm2');
-  
-  pm2.start({
-    script    : '/home/joaonetto/FCamara/projects/fcdriveProject/index.js', // Script to be run
-    exec_mode : 'cluster',        // Allows your app to be clustered
-    instances : 4,                // Optional: Scales your app by 4
-    max_memory_restart : '100M'   // Optional: Restarts your app if it reaches 100Mo
-  }, function(err, apps) {
-    pm2.disconnect();   // Disconnects from PM2
-    if (err) throw err
+function execute(command, callback) {
+  exec(command, (error, stdout, stderr) => { 
+      callback(stdout); 
   });
+};
+
+// call the function
+execute('pm2 start ../index.js', (output) => {
+  console.log(output);
 });
 
 function createWindow() {
